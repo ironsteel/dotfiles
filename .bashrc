@@ -86,21 +86,6 @@ _isroot=false
       source /usr/share/chruby/chruby.sh
     fi
   #}}}
-  # VTE {{{
-    if [[ $TERMINIX_ID ]]; then
-      source /etc/profile.d/vte.sh
-    fi
-  #}}}
-  # ANDROID SDK {{{
-    if [[ -d "/opt/android-sdk" ]]; then
-      export ANDROID_HOME=/opt/android-sdk
-    fi
-  #}}}
-  # CHROME {{{
-    if which google-chrome-stable &>/dev/null; then
-      export CHROME_BIN=/usr/bin/google-chrome-stable
-    fi
-  #}}}
   # EDITOR {{{
     if which vim &>/dev/null; then
       export EDITOR="vim"
@@ -134,12 +119,6 @@ _isroot=false
 #}}}
 # ALIAS {{{
   alias freemem='sudo /sbin/sysctl -w vm.drop_caches=3'
-  alias enter_matrix='echo -e "\e[32m"; while :; do for i in {1..16}; do r="$(($RANDOM % 2))"; if [[ $(($RANDOM % 5)) == 1 ]]; then if [[ $(($RANDOM % 4)) == 1 ]]; then v+="\e[1m $r   "; else v+="\e[2m $r   "; fi; else v+="     "; fi; done; echo -e "$v"; v=""; done'
-  # GIT_OR_HUB {{{
-    if which hub &>/dev/null; then
-      alias git=hub
-    fi
-  #}}}
   # AUTOCOLOR {{{
     alias ls='ls --color=auto'
     alias dir='dir --color=auto'
@@ -191,11 +170,6 @@ _isroot=false
       alias pacind='pacman -S --asdeps'     # Install given package(s) as dependencies of another package
       alias pacclean="pacman -Sc"           # Delete all not currently installed package files
       alias pacmake="makepkg -fcsi"         # Make package from PKGBUILD file in current directory
-    fi
-  #}}}
-  # MULTIMEDIA {{{
-    if which get_flash_videos &>/dev/null; then
-      alias gfv='get_flash_videos -r 720p --subtitles'
     fi
   #}}}
   # LS {{{
@@ -648,4 +622,6 @@ _isroot=false
   #}}}
 #}}}
 
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+# Alias for working with .dotfiles repo{{{
+  alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+#}}}
