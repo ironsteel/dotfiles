@@ -117,6 +117,8 @@ nnoremap <C-j> :tabprevious<CR>
 autocmd Filetype c setlocal ts=8 sts=8 sw=8 noexpandtab
 autocmd Filetype h setlocal ts=8 sts=8 sw=8 noexpandtab
 
+set nopaste
+
 " Persistent undo
 if has("persistent_undo") && !exists('$SUDO_USER')
     set undodir=$HOME/.vim/undodir/
