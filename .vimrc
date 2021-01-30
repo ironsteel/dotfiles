@@ -114,6 +114,8 @@ colorscheme bluegreen
 nnoremap <C-k> :tabnext<CR>
 nnoremap <C-j> :tabprevious<CR>
 
+nnoremap <C-]> :ALEGoToDefinition<CR>
+
 autocmd Filetype c setlocal ts=8 sts=8 sw=8 noexpandtab
 autocmd Filetype h setlocal ts=8 sts=8 sw=8 noexpandtab
 

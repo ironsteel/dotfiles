@@ -625,3 +625,4 @@ _isroot=false
 # Alias for working with .dotfiles repo{{{
   alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 #}}}
+source "$HOME/.cargo/env"
