@@ -140,6 +140,11 @@ endfunction
 set statusline+=%=
 set statusline+=\ %{LinterStatus()}
 
-" Simple ALE customization
+" ALE customization
 let g:ale_sign_error = '*'
 let g:ale_sign_warning = '>'
+
+" Dont run ALE on every keystroke, only when the file is saved
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_insert_leave = 0
+let g:ale_lint_on_enter = 0
