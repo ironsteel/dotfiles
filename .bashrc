@@ -626,3 +626,7 @@ _isroot=false
   alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 #}}}
 source "$HOME/.cargo/env"
+export CC_TOOL=/home/ironsteel/Downloads/cc-toolchain-linux
+export PATH=$PATH:/opt/rocm/bin:$HOME/src/depot_tools
+export PATH=$PATH:$HOME/opt/bin
+source "$HOME/opt/oss-cad-suite/environment"
